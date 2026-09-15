@@ -1,0 +1,1190 @@
+<!DOCTYPE html><html lang="zn-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>命令 | 两情若是久长时，又岂在朝朝暮暮</title><meta name="keywords" content="linux"><meta name="author" content="j"><meta name="copyright" content="j"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="命令"><meta name="application-name" content="命令"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="命令"><meta property="og:url" content="http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/index.html"><meta property="og:site_name" content="两情若是久长时，又岂在朝朝暮暮"><meta property="og:description" content="快捷键   ctrl+A 光标移动到最左边    ctrl+E 光标移动右边   ctrl+L 清屏   ctrl+R 查找历史命令   内存相关查看磁盘空间使用情况1df -h  查看当前文件夹占用多少空间1sudo du -sh  环境变量1234$ gedit &amp;#x2F;etc&amp;#x2F;profil 系统$"><meta property="og:locale" content="zn-CN"><meta property="og:image" content="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=d94afe8f-3014-3d31-4f04-7fd33dfe778b"><meta property="article:author" content="j"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=d94afe8f-3014-3d31-4f04-7fd33dfe778b"><meta name="description" content="快捷键   ctrl+A 光标移动到最左边    ctrl+E 光标移动右边   ctrl+L 清屏   ctrl+R 查找历史命令   内存相关查看磁盘空间使用情况1df -h  查看当前文件夹占用多少空间1sudo du -sh  环境变量1234$ gedit &amp;#x2F;etc&amp;#x2F;profil 系统$"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w","backTitle":"♪(^∇^*)"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: j","link":"链接: ","source":"来源: 两情若是久长时，又岂在朝朝暮暮","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '两情若是久长时，又岂在朝朝暮暮',
+  title: '命令',
+  postAI: '',
+  pageFillDescription: '快捷键, 内存相关, 查看磁盘空间使用情况, 查看当前文件夹占用多少空间, 环境变量, 清除DNS缓存, 打开文件夹, 查找文件 find, 创建文件 touch, 文件元数据 stat, 文件类型 file, Ubantu安装howdy（人脸识别）, 关闭错误报告工具, Linux 常用命令速查表, 一、文件与目录, 二、查看与编辑, 三、文本处理, 四、查找, 五、压缩打包, 六、网络, 七、进程与系统状态, 八、磁盘与硬件, 九、用户与权限, 十、服务与日志, 十一、包管理, 十二、编译工具链, 十三、动态链接, 十四、帮助与历史, 十五、实用小工具, 十六、危险命令（慎用）, 详细专题, 专题一：grep 详解, 1. 基本语法, 2. 匹配模式（正则）, 基础正则（BRE）, 扩展正则（ERE用 -E）, 3. 选项全表, 输出控制, 匹配控制, 上下文, 文件与目录, 4. 实战示例, 5. 退出码, 6. 常见坑, 7. 相关命令, 专题二：管道详解, 1. 基本语法, 2. 三个标准流, 3. 管道的阻塞与 SIGPIPE, 4. 与其他重定向配合, 5. tee：管道里的三通, 6. xargs：把管道输入转成参数, 7. 经典管道链, 日志分析, 进程与系统, 文件处理, 文本统计, 8. 管道中的变量作用域（重要坑）, 9. PIPESTATUS：管道退出码, 10. 命名管道（FIFO）, 11. 常见坑, 专题三：export 详解, 1. shell 变量 vs 环境变量, 2. 完整语法, 3. 导出函数（bash 特有）, 4. 查看与验证, 5. 常见坑, 专题四：环境变量详解, 1. 概念, 2. 生命周期与作用域, 3. 加载顺序（登录时）, 4. 各配置文件对比, 5. 重要环境变量一览, 6. PATH 深入, 7. 临时设置方式对比, 8. 调试, 9. 常见坑, 专题五：软链接详解, 1. 创建, 2. 硬链接 vs 软链接, 3. 查看, 4. 修改与删除, 5. 悬空链接（broken link）, 6. 相对 vs 绝对路径, 7. 常见用途, 放入 PATH, 版本切换, 配置切换, 库版本, 8. 特殊注意, 9. 相关命令快捷键光标移动到最左边光标移动右边清屏查找历史命令内存相关查看磁盘空间使用情况查看当前文件夹占用多少空间环境变量系统用户添加举例讲解清除缓存打开文件夹查找文件创建文件文件元数据文件大小块块大小普通文件设备硬链接权限访问时间修改时间变更时间创建时间文件类型安装人脸识别安装首先要把的源换一下还有的源也换成国内的换源用普通的权限运行一次再使用权限再运行一次需要用才不会报错解决依赖要先建立目录再去下载下载依赖新建文件夹移动三个文件到来源添加路径添加通过以下命令将人脸与特定用户相关联问题解决报错降级版本执行以下命令将降级到兼容版本好用的工具内存显示工具树工具关闭错误报告工具作用卸载服务常用命令速查表一文件与目录详细列表人类可读大小当前路径回到上一个目录递归建目录递归强制删除危险删除前询问移动重命名归档复制保留属性递归复制目录软链接详细元数据判断文件类型取文件名取目录绝对路径创建空文件更新时间戳二查看与编辑显示内容分页查看推荐大文件前行实时跟踪后行带行号倒序行数比较差异并排比较三文本处理替换按列处理取列排序数字倒序去重计数先字符转换合并连接拆分四查找按名查找按类型大小天内修改查找并删除命令路径命令手册位置命令类型数据库查找五压缩打包打包解压压缩查看内容压缩解压六网络连通性看响应头下载下载路由监听端口路由追踪查询远程复制增量同步远程登录加密文件传输简单文件传输无认证七进程与系统状态进程快照按排序实时监控运行时间负载内存虚拟内存优雅终止强制杀死按名杀查作业管理后台常驻八磁盘与硬件磁盘使用目录大小块设备硬件信息内核日志挂载卸载分区表检查修复刷盘九用户与权限当前用户在线登录历史用户管理改密码改权限改属主属组默认权限掩码提权编辑切换用户十服务与日志服务日志实时日志本次启动日志十一包管理十二编译工具链编译常用选项编译成构建清理配置构建图形化配置十三动态链接查看依赖动态段动态符号库缓存临时搜索路径调试搜索过程十四帮助与历史手册简版帮助搜手册历史上条上条参数第条反向搜索历史十五实用小工具定时执行计时序列计算器十六进制校验编解码目录树十六危险命令慎用删根目录当前目录全删清空文件覆盖磁盘权限全开炸弹详细专题专题一详解按行匹配模式并输出核心是模式选项目标基本语法选项模式文件目录不给文件从标准输入读常配合管道给多个文件输出会带文件名前缀给目录需加匹配模式正则基础正则符号含义任意单个字符前一个字符次或多次行首行尾字符集合如排除集合转义行首行尾空行含数字扩展正则用符号含义次或多次次或次精确次数或分组或三位数字纯字母行重复区别基础正则里要加转义不用则完全不解析正则按字面串匹配选项全表输出控制选项说明显示行号总是显示文件名不显示文件名只输出匹配的部分只输出匹配行数只输出含匹配的文件名只输出不含匹配的文件名静默用退出码判断高亮匹配匹配控制选项说明忽略大小写反向匹配不含的行匹配整词匹配整行固定字符串不当正则扩展正则正则支持等上下文选项说明匹配行后行匹配行前行前后各行文件与目录选项说明递归目录递归并跟随符号链接只搜匹配文件排除文件排除目录实战示例日志排查去注释统计代码搜索精确匹配整词整行字面点号不当正则只取匹配部分提取结果判断退出码码含义匹配到没匹配出错文件不存在等脚本里常用做条件判断常见坑模式含空格特殊字符要加引号否则先展开搜固定字符串用避免被当正则会匹配到自身用或二进制文件提示用强制当文本递归大目录加提速不是所有都支持有相关命令命令说明更快默认递归忽略大项目首选类似专题二管道详解管道把前一个命令的接到后一个命令的基本语法数据流输出处理处理屏幕三个标准流流描述符管道默认接收传递不进管道关键点默认仍打到屏幕要让它进管道传统写法简写丢弃错误只传正常输出管道的阻塞与前命令写满管道缓冲区会阻塞等后命令读后命令提前退出如前命令收到被终止无限输出读行后关闭被终止与其他重定向配合写法含义输出覆盖到文件追加错误到文件输出和错误都到文件分开从文件读输入管道里的三通既存文件又继续传编译同时存日志追加并统计把管道输入转成参数管道传的是流把它变成命令行参数删除每行一个处理含空格文件名占位符为什么用文件名含空格换行时普通管道会拆分错经典管道链日志分析访问量前的状态码统计找错误最多的接口实时监控错误要加否则缓冲导致不实时进程与系统前几内存总和谁占用端口文件处理文本统计管道中的变量作用域重要坑管道里每个命令在子运行变量修改不影响父空在子里变了父没变解决用进程替换或或的管道退出码管道整体退出码是最后一个命令的想看每个最后一个每个命令的退出码命名管道匿名管道只存在于命令间可创建持久管道终端终端用于进程间通信不占磁盘空间常见坑问题说明不进管道需变量在管道里改不生效子问题用或不实时加文件名含空格无用的退出码被掩盖用大文件管道爆内存优先用一次处理少多级专题三详解的作用把变量变成环境变量让子进程能继承变量环境变量类型作用范围创建方式变量仅当前环境变量当前所有子进程输出空子进程看不到输出本质环境变量是每个进程都带的一份键值表时复制给子进程变量只在内部完整语法设置并导出把已有变量导出值不变一次多个取消导出变量还在但不传子进程列出所有已导出变量导出函数特有取消导出函数导出函数特有子也能用查看与验证当前所有导出变量同上外部命令单个显示是否导出表示已导出常见坑正确引用旧值再追加错误覆盖掉原有含空格要引号值都是字符串别当数字用错不产生管道没意义在子或脚本里执行退出后失效不影响父配置文件里写才生效直接只在子生效专题四环境变量详解概念环境变量是操作系统程序运行时的配置每个进程都有一份时继承时传递生命周期与作用域父子进程能读到子进程能读到孙进程也能读到只向下传不向上传子进程改环境变量父进程不知道只影响之后启动的进程已经在运行的程序不会变加载顺序登录时以登录为例通常被调用退出时非交互式如脚本通常只读不读各配置文件对比文件生效范围生效时机适用所有用户登录系统级纯不支持展开所有用户登录系统级登录所有用户登录推荐放系统级变量所有用户交互式系统级当前用户登录用户级登录当前用户交互式用户级最常用当前用户登录通用非也用推荐做法用户级系统级重要环境变量一览变量作用命令搜索路径冒号分隔家目录当前用户默认当前上一个目录语言与本地化时区终端类型提示符默认编辑器动态库搜索路径预加载库历史配置语言环境深入逐行查看前置优先找追加兜底从找第一个所有匹配更可移植清缓存改后搜索顺序从前到后先找到先用临时设置方式对比方式生效范围示例当前会话当前单条命令仅该进程子括号内永久之后所有写配置文件只对有效不污染当前同上子内有效调试排序查看查代理数量跟踪脚本看传给程序的环境常见坑不解析写会出错非交互不加载脚本服务里可能读不到改完要或重新登录会重置环境需保留或会清环境不带则保留值都是字符串才能算数重复添加会累积配置里可判断去重专题五软链接详解软链接是指向另一个文件的特殊文件类似快捷方式创建目标链接名常见放进相对路径注意参数顺序目标链接目标在前硬链接软链接特性硬链接软链接命令目标链接目标链接与目标相同独立跨文件系统指向目录一般目标删除后仍可用数据还在失效悬空链接大小同目标路径字符串长度显示普通文件开头硬链接与源相同软链接有自己的查看开头显示目标显示指向的目标解析成绝对路径跟随同上元数据显示修改与删除强制覆盖已有链接删链接本身不影响目标同上重要只删链接带斜杠可能删到目标内容慎用悬空链接目标被删移动后软链接失效目标名变红或闪烁找出所有悬空软链接删除悬空链接相对绝对路径绝对移动链接仍有效相对基于链接所在目录解析相对路径的坑相对的是链接所在目录不是当前目录移动链接后可能失效常见用途放入版本切换指向当前版本换版本只需重指链接配置切换库版本特殊注意目标不存在也能创建生成悬空链接不会报错软链接默认复制指向的内容保留链接本身打包默认存链接本身则跟随保留链接跟随循环链接遍历时会报权限软链接权限无意义多为实际看目标权限相关命令命令用途创建软链接创建硬链接读链接目标解析绝对路径删除链接找悬空链接需要我把这份整理导出成文件或者再补充某个专题比如正则吗',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-09-15 22:06:18',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">两情若是久长时，又岂在朝朝暮暮</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/music/"><span> 音乐馆</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/album/"><span> 相册集</span></a></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021305801.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021305801.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021359952.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021359952.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>3</sup></a><a href="/tags/%E7%82%B9%E7%81%AF/" style="font-size: 1.05rem;">点灯<sup>1</sup></a><a href="/tags/%E7%85%A7%E7%89%87/" style="font-size: 1.05rem;">照片<sup>1</sup></a><a href="/tags/%E7%8E%A9%E5%84%BF/" style="font-size: 1.05rem;">玩儿<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">笔记<sup>10</sup></a><a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 1.05rem;">踩坑<sup>1</sup></a><a href="/tags/%E9%92%A6%E5%A9%B7/" style="font-size: 1.05rem;">钦婷<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/08/"><span class="card-archive-list-date">August 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">August 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">June 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">April 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">March 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">January 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">November 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">October 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/linux/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>linux</span></a></span></div></div><h1 class="post-title" itemprop="name headline">命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-03-26T15:12:14.000Z" title="发表于 2025-03-26 23:12:14">2025-03-26</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-09-15T14:06:18.841Z" title="更新于 2026-09-15 22:06:18">2026-09-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为宜宾"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>宜宾</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=d94afe8f-3014-3d31-4f04-7fd33dfe778b"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/"><header><a href="/tags/linux/" tabindex="-1" itemprop="url">linux</a><h1 id="CrawlerTitle" itemprop="name headline">命令</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">j</span><time itemprop="dateCreated datePublished" datetime="2025-03-26T15:12:14.000Z" title="发表于 2025-03-26 23:12:14">2025-03-26</time><time itemprop="dateCreated datePublished" datetime="2026-09-15T14:06:18.841Z" title="更新于 2026-09-15 22:06:18">2026-09-15</time></header><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th>ctrl+A</th>
+<th align="left">光标移动到最左边</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl+E</td>
+<td align="left">光标移动右边</td>
+</tr>
+<tr>
+<td>ctrl+L</td>
+<td align="left">清屏</td>
+</tr>
+<tr>
+<td>ctrl+R</td>
+<td align="left">查找历史命令</td>
+</tr>
+</tbody></table>
+<h2 id="内存相关"><a href="#内存相关" class="headerlink" title="内存相关"></a>内存相关</h2><h3 id="查看磁盘空间使用情况"><a href="#查看磁盘空间使用情况" class="headerlink" title="查看磁盘空间使用情况"></a>查看磁盘空间使用情况</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看当前文件夹占用多少空间"><a href="#查看当前文件夹占用多少空间" class="headerlink" title="查看当前文件夹占用多少空间"></a>查看当前文件夹占用多少空间</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">du</span> -sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ gedit /etc/profil 系统</span><br><span class="line">$ gedit ~/.bashrc  用户</span><br><span class="line"><span class="comment">#添加举例</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;/home/wj/opt/arm-linux-gnueabihf/gcc-linaro-5.4.1-2017.05-x86_64_arm-linux-gnueabihf/bin:<span class="variable">$PATH</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>讲解：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/youyoui/p/10680329.html">https://www.cnblogs.com/youyoui/p/10680329.html</a></p>
+<h2 id="清除DNS缓存"><a href="#清除DNS缓存" class="headerlink" title="清除DNS缓存"></a>清除DNS缓存</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> resolvectl flush-caches</span><br></pre></td></tr></table></figure>
+
+<h2 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nautilus</span><br></pre></td></tr></table></figure>
+
+<h2 id="查找文件-find"><a href="#查找文件-find" class="headerlink" title="查找文件 find"></a>查找文件 find</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> find / -<span class="built_in">type</span> f -name <span class="string">&quot;r8188eu.ko&quot;</span> 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建文件-touch"><a href="#创建文件-touch" class="headerlink" title="创建文件 touch"></a>创建文件 touch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> 1.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件元数据-stat"><a href="#文件元数据-stat" class="headerlink" title="文件元数据 stat"></a>文件元数据 stat</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wj@wj:~/works/AT32/led/bulid$ <span class="built_in">stat</span> led.elf </span><br><span class="line">  文件：led.elf</span><br><span class="line">  大小：295416    	块：344        IO 块大小：4096   普通文件</span><br><span class="line">设备：803h/2051d	Inode：6478363     硬链接：1</span><br><span class="line">权限：(0775/-rwxrwxr-x)  Uid: ( 1000/      wj)   Gid: ( 1000/      wj)</span><br><span class="line">访问时间：2026-09-15 22:02:50.862677117 +0800</span><br><span class="line">修改时间：2026-09-15 21:58:41.326412446 +0800</span><br><span class="line">变更时间：2026-09-15 21:58:41.326412446 +0800</span><br><span class="line">创建时间：2026-09-15 21:58:41.157406693 +0800</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件类型-file"><a href="#文件类型-file" class="headerlink" title="文件类型 file"></a>文件类型 file</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wj@wj:~/works/AT32/led/bulid$ file led.elf </span><br><span class="line">led.elf: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, with debug_info, not stripped</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Ubantu安装howdy（人脸识别）"><a href="#Ubantu安装howdy（人脸识别）" class="headerlink" title="Ubantu安装howdy（人脸识别）"></a>Ubantu安装howdy（人脸识别）</h2><p><a target="_blank" rel="noopener" href="https://www.sysgeek.cn/howdy-face-unlock-linux/">安装howdy</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.sysgeek.cn/howdy-face-unlock-linux/</span><br></pre></td></tr></table></figure>
+
+<p>首先要把Ubantu的apt源换一下，还有pip的源也换成国内的</p>
+<p><strong>pip换源</strong>，用普通的权限运行一次，再使用sudo权限再运行一次</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 需要用https才不会报错</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<p>解决依赖，要先建立目录再去下载。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载依赖</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/davisking/dlib-models </span><br><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line">/lib/security/howdy/dlib-data</span><br><span class="line">移动三个文件到 /lib/security/howdy/dlib-data</span><br><span class="line">dlib_face_recognition_resnet_model_v1.dat.bz2</span><br><span class="line">mmod_human_face_detector.dat.bz2</span><br><span class="line">shape_predictor_5_face_landmarks.dat.bz2</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jingluo635/article/details/129419469">来源</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加路径</span></span><br><span class="line"><span class="built_in">sudo</span> howdy config</span><br><span class="line">/dev/video0</span><br><span class="line"><span class="comment"># 添加</span></span><br><span class="line"><span class="built_in">sudo</span> howdy add</span><br><span class="line"><span class="comment"># 通过以下命令将人脸与特定 username 用户相关联：</span></span><br><span class="line"><span class="built_in">sudo</span> howdy -U username add</span><br></pre></td></tr></table></figure>
+
+<p>问题解决</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> howdy add</span><br><span class="line"><span class="comment"># 报错 ：Unsupp orted image type, must be 8bit gray or RGB image</span></span><br><span class="line"><span class="comment"># 降级numpy版本，执行以下命令将numpy降级到兼容版本：</span></span><br><span class="line"><span class="built_in">sudo</span> pip install --upgrade numpy==1.26.4</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>ubantu 好用的工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#内存显示工具</span></span><br><span class="line"><span class="built_in">sudo</span> apt install htop</span><br><span class="line"></span><br><span class="line"><span class="comment">#树工具</span></span><br><span class="line"><span class="built_in">sudo</span> apt install tree</span><br></pre></td></tr></table></figure>
+
+
+
+<p>VM Tools</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt upgrade</span><br><span class="line"><span class="built_in">sudo</span> apt-get install open-vm-tools</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools-desktop -y</span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="关闭错误报告工具"><a href="#关闭错误报告工具" class="headerlink" title="关闭错误报告工具"></a>关闭错误报告工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">sudo</span> apt remove apport</span><br><span class="line">作用：卸载 apport 服务。]()</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="Linux-常用命令速查表"><a href="#Linux-常用命令速查表" class="headerlink" title="Linux 常用命令速查表"></a>Linux 常用命令速查表</h1><h2 id="一、文件与目录"><a href="#一、文件与目录" class="headerlink" title="一、文件与目录"></a>一、文件与目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -alh              <span class="comment"># 详细列表，人类可读大小</span></span><br><span class="line"><span class="built_in">pwd</span>                  <span class="comment"># 当前路径</span></span><br><span class="line"><span class="built_in">cd</span> -                 <span class="comment"># 回到上一个目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p a/b/c       <span class="comment"># 递归建目录</span></span><br><span class="line"><span class="built_in">rm</span> -rf <span class="built_in">dir</span>           <span class="comment"># 递归强制删除（危险）</span></span><br><span class="line"><span class="built_in">rm</span> -i file           <span class="comment"># 删除前询问</span></span><br><span class="line"><span class="built_in">mv</span> a b               <span class="comment"># 移动/重命名</span></span><br><span class="line"><span class="built_in">cp</span> -a src dst        <span class="comment"># 归档复制（保留属性）</span></span><br><span class="line"><span class="built_in">cp</span> -r dir1 dir2      <span class="comment"># 递归复制目录</span></span><br><span class="line"><span class="built_in">ln</span> -s target <span class="built_in">link</span>    <span class="comment"># 软链接</span></span><br><span class="line"><span class="built_in">stat</span> file            <span class="comment"># 详细元数据</span></span><br><span class="line">file file            <span class="comment"># 判断文件类型</span></span><br><span class="line"><span class="built_in">basename</span> /a/b/c.txt  <span class="comment"># 取文件名</span></span><br><span class="line"><span class="built_in">dirname</span> /a/b/c.txt   <span class="comment"># 取目录</span></span><br><span class="line"><span class="built_in">realpath</span> file        <span class="comment"># 绝对路径</span></span><br><span class="line"><span class="built_in">touch</span> file           <span class="comment"># 创建空文件/更新时间戳</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二、查看与编辑"><a href="#二、查看与编辑" class="headerlink" title="二、查看与编辑"></a>二、查看与编辑</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> file             <span class="comment"># 显示内容</span></span><br><span class="line">less file            <span class="comment"># 分页查看（推荐大文件）</span></span><br><span class="line"><span class="built_in">head</span> -20 file        <span class="comment"># 前 20 行</span></span><br><span class="line"><span class="built_in">tail</span> -f <span class="built_in">log</span>          <span class="comment"># 实时跟踪</span></span><br><span class="line"><span class="built_in">tail</span> -n 100 file     <span class="comment"># 后 100 行</span></span><br><span class="line"><span class="built_in">nl</span> file              <span class="comment"># 带行号</span></span><br><span class="line"><span class="built_in">tac</span> file             <span class="comment"># 倒序</span></span><br><span class="line"><span class="built_in">wc</span> -l file           <span class="comment"># 行数</span></span><br><span class="line">diff a b             <span class="comment"># 比较差异</span></span><br><span class="line">vimdiff a b          <span class="comment"># 并排比较</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、文本处理"><a href="#三、文本处理" class="headerlink" title="三、文本处理"></a>三、文本处理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">&#x27;s/old/new/g&#x27;</span>        <span class="comment"># 替换</span></span><br><span class="line">awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>         <span class="comment"># 按列处理</span></span><br><span class="line"><span class="built_in">cut</span> -d: -f1 file         <span class="comment"># 取列</span></span><br><span class="line"><span class="built_in">sort</span> / <span class="built_in">sort</span> -rn          <span class="comment"># 排序 / 数字倒序</span></span><br><span class="line"><span class="built_in">uniq</span> -c                  <span class="comment"># 去重计数（先 sort）</span></span><br><span class="line"><span class="built_in">tr</span> <span class="string">&#x27;a-z&#x27;</span> <span class="string">&#x27;A-Z&#x27;</span>           <span class="comment"># 字符转换</span></span><br><span class="line"><span class="built_in">paste</span> / <span class="built_in">join</span>             <span class="comment"># 合并 / 连接</span></span><br><span class="line"><span class="built_in">split</span> -l 1000 file       <span class="comment"># 拆分</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="四、查找"><a href="#四、查找" class="headerlink" title="四、查找"></a>四、查找</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">&quot;*.c&quot;</span>           <span class="comment"># 按名查找</span></span><br><span class="line">find . -<span class="built_in">type</span> f -size +100M   <span class="comment"># 按类型/大小</span></span><br><span class="line">find . -mtime -7             <span class="comment"># 7 天内修改</span></span><br><span class="line">find . -name <span class="string">&quot;*.tmp&quot;</span> -delete <span class="comment"># 查找并删除</span></span><br><span class="line"><span class="built_in">which</span> python                 <span class="comment"># 命令路径</span></span><br><span class="line">whereis <span class="built_in">ls</span>                   <span class="comment"># 命令+手册位置</span></span><br><span class="line"><span class="built_in">type</span> -a <span class="built_in">ls</span>                   <span class="comment"># 命令类型</span></span><br><span class="line">locate file                  <span class="comment"># 数据库查找</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="五、压缩打包"><a href="#五、压缩打包" class="headerlink" title="五、压缩打包"></a>五、压缩打包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar czvf a.tar.gz <span class="built_in">dir</span>/       <span class="comment"># 打包 gzip</span></span><br><span class="line">tar xzvf a.tar.gz            <span class="comment"># 解压</span></span><br><span class="line">tar cJvf a.tar.xz <span class="built_in">dir</span>/       <span class="comment"># xz 压缩</span></span><br><span class="line">tar tzvf a.tar.gz            <span class="comment"># 查看内容</span></span><br><span class="line">7z a archive.7z <span class="built_in">dir</span>/         <span class="comment"># 7z 压缩</span></span><br><span class="line">7z x archive.7z              <span class="comment"># 7z 解压</span></span><br><span class="line">gzip / gunzip</span><br><span class="line">zip -r a.zip <span class="built_in">dir</span>/ / unzip a.zip</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、网络"><a href="#六、网络" class="headerlink" title="六、网络"></a>六、网络</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ping host                    <span class="comment"># 连通性</span></span><br><span class="line">curl -I url                  <span class="comment"># 看响应头</span></span><br><span class="line">curl -O url                  <span class="comment"># 下载</span></span><br><span class="line">wget url                     <span class="comment"># 下载</span></span><br><span class="line">ip a / ip r                  <span class="comment"># IP / 路由</span></span><br><span class="line">ss -tunlp                    <span class="comment"># 监听端口</span></span><br><span class="line">traceroute host              <span class="comment"># 路由追踪</span></span><br><span class="line">dig / nslookup domain        <span class="comment"># DNS 查询</span></span><br><span class="line">scp file user@host:/path     <span class="comment"># 远程复制</span></span><br><span class="line">rsync -avz src/ dst/         <span class="comment"># 增量同步</span></span><br><span class="line">ssh user@host                <span class="comment"># 远程登录</span></span><br><span class="line">sftp user@host               <span class="comment"># 加密文件传输</span></span><br><span class="line">tftp host                    <span class="comment"># 简单文件传输（无认证）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="七、进程与系统状态"><a href="#七、进程与系统状态" class="headerlink" title="七、进程与系统状态"></a>七、进程与系统状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ps aux                       <span class="comment"># 进程快照</span></span><br><span class="line">ps aux --<span class="built_in">sort</span>=-%cpu | <span class="built_in">head</span>   <span class="comment"># 按 CPU 排序</span></span><br><span class="line">top / htop                   <span class="comment"># 实时监控</span></span><br><span class="line"><span class="built_in">uptime</span>                       <span class="comment"># 运行时间+负载</span></span><br><span class="line">free -h                      <span class="comment"># 内存</span></span><br><span class="line">vmstat 1 5                   <span class="comment"># 虚拟内存/IO</span></span><br><span class="line"><span class="built_in">kill</span> -15 PID                 <span class="comment"># 优雅终止</span></span><br><span class="line"><span class="built_in">kill</span> -9 PID                  <span class="comment"># 强制杀死</span></span><br><span class="line">pkill / killall name         <span class="comment"># 按名杀</span></span><br><span class="line">pgrep -a name                <span class="comment"># 查 PID</span></span><br><span class="line"><span class="built_in">jobs</span> / <span class="built_in">bg</span> / <span class="built_in">fg</span> / Ctrl+Z      <span class="comment"># 作业管理</span></span><br><span class="line"><span class="built_in">nohup</span> cmd &amp;                  <span class="comment"># 后台常驻</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="八、磁盘与硬件"><a href="#八、磁盘与硬件" class="headerlink" title="八、磁盘与硬件"></a>八、磁盘与硬件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h                        <span class="comment"># 磁盘使用</span></span><br><span class="line"><span class="built_in">du</span> -sh <span class="built_in">dir</span>                   <span class="comment"># 目录大小</span></span><br><span class="line">lsblk                        <span class="comment"># 块设备</span></span><br><span class="line">lscpu / lsusb / lspci        <span class="comment"># 硬件信息</span></span><br><span class="line">dmesg                        <span class="comment"># 内核日志</span></span><br><span class="line">mount / umount               <span class="comment"># 挂载/卸载</span></span><br><span class="line">fdisk -l                     <span class="comment"># 分区表</span></span><br><span class="line">fsck /dev/sdb1               <span class="comment"># 检查修复</span></span><br><span class="line"><span class="built_in">sync</span>                         <span class="comment"># 刷盘</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="九、用户与权限"><a href="#九、用户与权限" class="headerlink" title="九、用户与权限"></a>九、用户与权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">whoami</span> / <span class="built_in">id</span>                  <span class="comment"># 当前用户</span></span><br><span class="line"><span class="built_in">who</span> / w / last               <span class="comment"># 在线/登录历史</span></span><br><span class="line">useradd / usermod / userdel  <span class="comment"># 用户管理</span></span><br><span class="line">passwd user                  <span class="comment"># 改密码</span></span><br><span class="line"><span class="built_in">chmod</span> 755 file               <span class="comment"># 改权限</span></span><br><span class="line"><span class="built_in">chown</span> user:group file        <span class="comment"># 改属主属组</span></span><br><span class="line"><span class="built_in">umask</span>                        <span class="comment"># 默认权限掩码</span></span><br><span class="line"><span class="built_in">sudo</span> cmd / <span class="built_in">sudo</span> -i           <span class="comment"># 提权</span></span><br><span class="line">visudo                       <span class="comment"># 编辑 sudoers</span></span><br><span class="line">su - user                    <span class="comment"># 切换用户</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十、服务与日志"><a href="#十、服务与日志" class="headerlink" title="十、服务与日志"></a>十、服务与日志</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl status/start/stop/restart nginx</span><br><span class="line">systemctl <span class="built_in">enable</span>/disable nginx</span><br><span class="line">journalctl -u nginx          <span class="comment"># 服务日志</span></span><br><span class="line">journalctl -f                <span class="comment"># 实时日志</span></span><br><span class="line">journalctl -b                <span class="comment"># 本次启动日志</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十一、包管理"><a href="#十一、包管理" class="headerlink" title="十一、包管理"></a>十一、包管理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Debian/Ubuntu</span></span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br><span class="line">apt install / remove / search pkg</span><br><span class="line">dpkg -i file.deb</span><br><span class="line"></span><br><span class="line"><span class="comment"># CentOS/RHEL</span></span><br><span class="line">yum install pkg / dnf install pkg</span><br><span class="line">rpm -qa | grep pkg</span><br></pre></td></tr></table></figure>
+
+<h2 id="十二、编译工具链"><a href="#十二、编译工具链" class="headerlink" title="十二、编译工具链"></a>十二、编译工具链</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.c -o hello         <span class="comment"># 编译</span></span><br><span class="line">gcc -Wall -g -O2 -std=c17    <span class="comment"># 常用选项</span></span><br><span class="line">g++ -c foo.cpp               <span class="comment"># 编译成 .o</span></span><br><span class="line">make / make clean            <span class="comment"># 构建 / 清理</span></span><br><span class="line">cmake -S src -B build        <span class="comment"># 配置</span></span><br><span class="line">cmake --build build          <span class="comment"># 构建</span></span><br><span class="line">cmake-gui                    <span class="comment"># 图形化配置</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十三、动态链接"><a href="#十三、动态链接" class="headerlink" title="十三、动态链接"></a>十三、动态链接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ldd ./app                    <span class="comment"># 查看依赖</span></span><br><span class="line">objdump -p ./app | grep NEEDED</span><br><span class="line">readelf -d ./app             <span class="comment"># 动态段</span></span><br><span class="line">nm -D ./lib.so               <span class="comment"># 动态符号</span></span><br><span class="line">ldconfig -p                  <span class="comment"># 库缓存</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/path <span class="comment"># 临时搜索路径</span></span><br><span class="line">LD_DEBUG=libs ./app          <span class="comment"># 调试搜索过程</span></span><br><span class="line">patchelf --set-rpath /path ./app</span><br></pre></td></tr></table></figure>
+
+<h2 id="十四、帮助与历史"><a href="#十四、帮助与历史" class="headerlink" title="十四、帮助与历史"></a>十四、帮助与历史</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">man cmd / cmd --<span class="built_in">help</span>         <span class="comment"># 手册/简版帮助</span></span><br><span class="line">apropos keyword              <span class="comment"># 搜手册</span></span><br><span class="line"><span class="built_in">history</span>                      <span class="comment"># 历史</span></span><br><span class="line">!! / !$ / !123               <span class="comment"># 上条/上条参数/第123条</span></span><br><span class="line">Ctrl+R                       <span class="comment"># 反向搜索历史</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十五、实用小工具"><a href="#十五、实用小工具" class="headerlink" title="十五、实用小工具"></a>十五、实用小工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">watch -n 2 cmd               <span class="comment"># 定时执行</span></span><br><span class="line">time cmd                     <span class="comment"># 计时</span></span><br><span class="line"><span class="built_in">seq</span> 1 10                     <span class="comment"># 序列</span></span><br><span class="line">bc                           <span class="comment"># 计算器</span></span><br><span class="line">xxd file                     <span class="comment"># 十六进制</span></span><br><span class="line"><span class="built_in">md5sum</span> / <span class="built_in">sha256sum</span>           <span class="comment"># 校验</span></span><br><span class="line"><span class="built_in">base64</span>                       <span class="comment"># 编解码</span></span><br><span class="line">tree -L 2                    <span class="comment"># 目录树</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十六、危险命令（慎用）"><a href="#十六、危险命令（慎用）" class="headerlink" title="十六、危险命令（慎用）"></a>十六、危险命令（慎用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /                     <span class="comment"># 删根目录</span></span><br><span class="line"><span class="built_in">rm</span> -rf *                     <span class="comment"># 当前目录全删</span></span><br><span class="line">&gt; file                       <span class="comment"># 清空文件</span></span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=/dev/sda  <span class="comment"># 覆盖磁盘</span></span><br><span class="line"><span class="built_in">chmod</span> -R 777 /               <span class="comment"># 权限全开</span></span><br><span class="line">:()&#123; :|:&amp; &#125;;:                <span class="comment"># fork 炸弹</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="详细专题"><a href="#详细专题" class="headerlink" title="详细专题"></a>详细专题</h1><hr>
+<h1 id="专题一：grep-详解"><a href="#专题一：grep-详解" class="headerlink" title="专题一：grep 详解"></a>专题一：grep 详解</h1><p><code>grep</code> &#x3D; 按行匹配模式并输出。核心是”<strong>模式 + 选项 + 目标</strong>“。</p>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [选项] <span class="string">&quot;模式&quot;</span> [文件/目录...]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不给文件：从标准输入读（常配合管道）</li>
+<li>给多个文件：输出会带文件名前缀</li>
+<li>给目录：需加 <code>-r</code></li>
+</ul>
+<h2 id="2-匹配模式（正则）"><a href="#2-匹配模式（正则）" class="headerlink" title="2. 匹配模式（正则）"></a>2. 匹配模式（正则）</h2><h3 id="基础正则（BRE）"><a href="#基础正则（BRE）" class="headerlink" title="基础正则（BRE）"></a>基础正则（BRE）</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.</code></td>
+<td>任意单个字符</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>前一个字符 0 次或多次</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>行首</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>行尾</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>字符集合，如 <code>[abc]</code>、<code>[0-9]</code></td>
+</tr>
+<tr>
+<td><code>[^]</code></td>
+<td>排除集合</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>转义</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&quot;^root&quot;</span> /etc/passwd      <span class="comment"># 行首 root</span></span><br><span class="line">grep <span class="string">&quot;bash$&quot;</span> /etc/passwd      <span class="comment"># 行尾 bash</span></span><br><span class="line">grep <span class="string">&quot;^$&quot;</span> file                <span class="comment"># 空行</span></span><br><span class="line">grep <span class="string">&quot;ab*c&quot;</span> file              <span class="comment"># ac / abc / abbc</span></span><br><span class="line">grep <span class="string">&quot;[0-9]&quot;</span> file             <span class="comment"># 含数字</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩展正则（ERE，用-E）"><a href="#扩展正则（ERE，用-E）" class="headerlink" title="扩展正则（ERE，用 -E）"></a>扩展正则（ERE，用 -E）</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>+</code></td>
+<td>1 次或多次</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>0 次或 1 次</td>
+</tr>
+<tr>
+<td><code>&#123;n&#125;</code> <code>&#123;n,m&#125;</code></td>
+<td>精确次数</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>或</td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>分组</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&quot;cat|dog&quot;</span> file            <span class="comment"># cat 或 dog</span></span><br><span class="line">grep -E <span class="string">&quot;[0-9]&#123;3&#125;&quot;</span> file           <span class="comment"># 三位数字</span></span><br><span class="line">grep -E <span class="string">&quot;^[A-Za-z]+$&quot;</span> file        <span class="comment"># 纯字母行</span></span><br><span class="line">grep -E <span class="string">&quot;colou?r&quot;</span> file            <span class="comment"># color / colour</span></span><br><span class="line">grep -E <span class="string">&quot;(ab)+&quot;</span> file              <span class="comment"># ab 重复</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>区别</strong>：基础正则里 <code>+ ? &#123; &#125; | ( )</code> 要加 <code>\</code> 转义，<code>-E</code> 不用。<code>-F</code> 则完全不解析正则，按字面串匹配。</p>
+<h2 id="3-选项全表"><a href="#3-选项全表" class="headerlink" title="3. 选项全表"></a>3. 选项全表</h2><h3 id="输出控制"><a href="#输出控制" class="headerlink" title="输出控制"></a>输出控制</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-n</code></td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td><code>-H</code></td>
+<td>总是显示文件名</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>不显示文件名</td>
+</tr>
+<tr>
+<td><code>-o</code></td>
+<td>只输出匹配的部分</td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>只输出匹配行数</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>只输出含匹配的文件名</td>
+</tr>
+<tr>
+<td><code>-L</code></td>
+<td>只输出不含匹配的文件名</td>
+</tr>
+<tr>
+<td><code>-q</code></td>
+<td>静默，用退出码判断</td>
+</tr>
+<tr>
+<td><code>--color=auto</code></td>
+<td>高亮匹配</td>
+</tr>
+</tbody></table>
+<h3 id="匹配控制"><a href="#匹配控制" class="headerlink" title="匹配控制"></a>匹配控制</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-i</code></td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>反向匹配（不含的行）</td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td>匹配整词</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>匹配整行</td>
+</tr>
+<tr>
+<td><code>-F</code></td>
+<td>固定字符串，不当正则</td>
+</tr>
+<tr>
+<td><code>-E</code></td>
+<td>扩展正则</td>
+</tr>
+<tr>
+<td><code>-P</code></td>
+<td>Perl 正则（支持 <code>\d</code> <code>\w</code> 等）</td>
+</tr>
+</tbody></table>
+<h3 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-A n</code></td>
+<td>匹配行后 n 行（after）</td>
+</tr>
+<tr>
+<td><code>-B n</code></td>
+<td>匹配行前 n 行（before）</td>
+</tr>
+<tr>
+<td><code>-C n</code></td>
+<td>前后各 n 行</td>
+</tr>
+</tbody></table>
+<h3 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-r</code></td>
+<td>递归目录</td>
+</tr>
+<tr>
+<td><code>-R</code></td>
+<td>递归并跟随符号链接</td>
+</tr>
+<tr>
+<td><code>--include=*.c</code></td>
+<td>只搜匹配文件</td>
+</tr>
+<tr>
+<td><code>--exclude=*.log</code></td>
+<td>排除文件</td>
+</tr>
+<tr>
+<td><code>--exclude-dir=.git</code></td>
+<td>排除目录</td>
+</tr>
+</tbody></table>
+<h2 id="4-实战示例"><a href="#4-实战示例" class="headerlink" title="4. 实战示例"></a>4. 实战示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 日志排查</span></span><br><span class="line">grep -n <span class="string">&quot;ERROR&quot;</span> app.log</span><br><span class="line">grep -<span class="keyword">in</span> <span class="string">&quot;error&quot;</span> app.log</span><br><span class="line">grep -A3 -B1 <span class="string">&quot;Exception&quot;</span> app.log</span><br><span class="line">grep -v <span class="string">&quot;^#&quot;</span> config.conf              <span class="comment"># 去注释</span></span><br><span class="line">grep -c <span class="string">&quot;404&quot;</span> access.log              <span class="comment"># 统计</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代码搜索</span></span><br><span class="line">grep -rn <span class="string">&quot;TODO&quot;</span> ./src/</span><br><span class="line">grep -rn <span class="string">&quot;func&quot;</span> . --include=<span class="string">&quot;*.c&quot;</span></span><br><span class="line">grep -rn <span class="string">&quot;test&quot;</span> . --exclude-dir=node_modules</span><br><span class="line"></span><br><span class="line"><span class="comment"># 精确匹配</span></span><br><span class="line">grep -w <span class="string">&quot;the&quot;</span> file                    <span class="comment"># 整词</span></span><br><span class="line">grep -x <span class="string">&quot;hello&quot;</span> file                  <span class="comment"># 整行</span></span><br><span class="line">grep -F <span class="string">&quot;a.b.c&quot;</span> file                  <span class="comment"># 字面点号，不当正则</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 只取匹配部分</span></span><br><span class="line">grep -oE <span class="string">&quot;[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+&quot;</span> access.log   <span class="comment"># 提取 IP</span></span><br><span class="line">grep -oE <span class="string">&quot;id=[0-9]+&quot;</span> file</span><br><span class="line"></span><br><span class="line"><span class="comment"># 结果判断</span></span><br><span class="line">grep -q <span class="string">&quot;ok&quot;</span> file &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;found&quot;</span> || <span class="built_in">echo</span> <span class="string">&quot;not found&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-退出码"><a href="#5-退出码" class="headerlink" title="5. 退出码"></a>5. 退出码</h2><table>
+<thead>
+<tr>
+<th>码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>匹配到</td>
+</tr>
+<tr>
+<td>1</td>
+<td>没匹配</td>
+</tr>
+<tr>
+<td>2</td>
+<td>出错（文件不存在等）</td>
+</tr>
+</tbody></table>
+<p>脚本里常用 <code>-q</code> + <code>&amp;&amp;</code>&#x2F;<code>||</code> 做条件判断。</p>
+<h2 id="6-常见坑"><a href="#6-常见坑" class="headerlink" title="6. 常见坑"></a>6. 常见坑</h2><ul>
+<li>模式含空格&#x2F;特殊字符要<strong>加引号</strong>，否则 shell 先展开</li>
+<li>搜固定字符串用 <code>-F</code>，避免 <code>.</code> <code>*</code> 被当正则</li>
+<li><code>ps aux | grep xxx</code> 会匹配到 grep 自身，用 <code>grep [x]xx</code> 或 <code>grep -v grep</code></li>
+<li>二进制文件提示 <code>binary file matches</code>，用 <code>-a</code> 强制当文本</li>
+<li>递归大目录加 <code>--include</code>&#x2F;<code>--exclude</code> 提速</li>
+<li><code>-P</code> 不是所有 grep 都支持（GNU grep 有）</li>
+</ul>
+<h2 id="7-相关命令"><a href="#7-相关命令" class="headerlink" title="7. 相关命令"></a>7. 相关命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>egrep</code></td>
+<td>&#x3D; <code>grep -E</code></td>
+</tr>
+<tr>
+<td><code>fgrep</code></td>
+<td>&#x3D; <code>grep -F</code></td>
+</tr>
+<tr>
+<td><code>rg</code>（ripgrep）</td>
+<td>更快，默认递归、忽略 .gitignore，大项目首选</td>
+</tr>
+<tr>
+<td><code>ag</code></td>
+<td>类似 rg</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="专题二：管道详解"><a href="#专题二：管道详解" class="headerlink" title="专题二：管道详解"></a>专题二：管道详解</h1><p>管道 <code>|</code> 把前一个命令的 <strong>stdout</strong> 接到后一个命令的 <strong>stdin</strong>。</p>
+<h2 id="1-基本语法-1"><a href="#1-基本语法-1" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmd1 | cmd2 | cmd3</span><br></pre></td></tr></table></figure>
+
+<p>数据流：<code>cmd1</code> 输出 → <code>cmd2</code> 处理 → <code>cmd3</code> 处理 → 屏幕。</p>
+<h2 id="2-三个标准流"><a href="#2-三个标准流" class="headerlink" title="2. 三个标准流"></a>2. 三个标准流</h2><table>
+<thead>
+<tr>
+<th>流</th>
+<th>描述符</th>
+<th>管道默认</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stdin</td>
+<td>0</td>
+<td>接收</td>
+</tr>
+<tr>
+<td>stdout</td>
+<td>1</td>
+<td>传递</td>
+</tr>
+<tr>
+<td>stderr</td>
+<td>2</td>
+<td><strong>不进管道</strong></td>
+</tr>
+</tbody></table>
+<p><strong>关键点</strong>：stderr 默认仍打到屏幕，要让它进管道：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cmd 2&gt;&amp;1 | grep error        <span class="comment"># 传统写法</span></span><br><span class="line">cmd |&amp; grep error            <span class="comment"># bash 简写</span></span><br><span class="line">cmd 2&gt;/dev/null | grep x     <span class="comment"># 丢弃错误，只传正常输出</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-管道的阻塞与-SIGPIPE"><a href="#3-管道的阻塞与-SIGPIPE" class="headerlink" title="3. 管道的阻塞与 SIGPIPE"></a>3. 管道的阻塞与 SIGPIPE</h2><ul>
+<li>前命令写满管道缓冲区会<strong>阻塞</strong>，等后命令读</li>
+<li>后命令提前退出（如 <code>head</code>），前命令收到 <code>SIGPIPE</code> 被终止</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">yes</span> | <span class="built_in">head</span> -3        <span class="comment"># yes 无限输出，head 读 3 行后关闭，yes 被终止</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-与其他重定向配合"><a href="#4-与其他重定向配合" class="headerlink" title="4. 与其他重定向配合"></a>4. 与其他重定向配合</h2><table>
+<thead>
+<tr>
+<th>写法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>cmd &gt; file</code></td>
+<td>输出覆盖到文件</td>
+</tr>
+<tr>
+<td><code>cmd &gt;&gt; file</code></td>
+<td>追加</td>
+</tr>
+<tr>
+<td><code>cmd 2&gt; err.log</code></td>
+<td>错误到文件</td>
+</tr>
+<tr>
+<td><code>cmd &gt; out.log 2&gt;&amp;1</code></td>
+<td>输出和错误都到文件</td>
+</tr>
+<tr>
+<td><code>cmd &gt; out.log 2&gt; err.log</code></td>
+<td>分开</td>
+</tr>
+<tr>
+<td><code>cmd &lt; input.txt</code></td>
+<td>从文件读输入</td>
+</tr>
+<tr>
+<td>&#96;cmd</td>
+<td>tee file&#96;</td>
+</tr>
+<tr>
+<td>&#96;cmd</td>
+<td>tee -a file&#96;</td>
+</tr>
+</tbody></table>
+<h2 id="5-tee：管道里的三通"><a href="#5-tee：管道里的三通" class="headerlink" title="5. tee：管道里的三通"></a>5. tee：管道里的三通</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> | <span class="built_in">tee</span> list.txt | grep <span class="string">&quot;.c&quot;</span>     <span class="comment"># 既存文件又继续传</span></span><br><span class="line">make 2&gt;&amp;1 | <span class="built_in">tee</span> build.log         <span class="comment"># 编译同时存日志</span></span><br><span class="line">cmd | <span class="built_in">tee</span> -a <span class="built_in">log</span> | <span class="built_in">wc</span> -l          <span class="comment"># 追加并统计</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-xargs：把管道输入转成参数"><a href="#6-xargs：把管道输入转成参数" class="headerlink" title="6. xargs：把管道输入转成参数"></a>6. xargs：把管道输入转成参数</h2><p>管道传的是”流”，<code>xargs</code> 把它变成命令行参数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">&quot;*.tmp&quot;</span> | xargs <span class="built_in">rm</span>            <span class="comment"># 删除</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;a b c&quot;</span> | xargs -n1 <span class="built_in">echo</span>              <span class="comment"># 每行一个</span></span><br><span class="line">find . -name <span class="string">&quot;*.txt&quot;</span> -print0 | xargs -0 <span class="built_in">rm</span> <span class="comment"># 处理含空格文件名</span></span><br><span class="line"><span class="built_in">cat</span> list.txt | xargs -I&#123;&#125; <span class="built_in">cp</span> &#123;&#125; /dst/      <span class="comment"># 占位符</span></span><br></pre></td></tr></table></figure>
+
+<p>**为什么用 <code>-print0</code> + <code>-0</code>**：文件名含空格&#x2F;换行时，普通管道会拆分错。</p>
+<h2 id="7-经典管道链"><a href="#7-经典管道链" class="headerlink" title="7. 经典管道链"></a>7. 经典管道链</h2><h3 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 访问量前 10 的 IP</span></span><br><span class="line"><span class="built_in">cat</span> access.log | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -rn | <span class="built_in">head</span> -10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 状态码统计</span></span><br><span class="line">awk <span class="string">&#x27;&#123;print $9&#125;&#x27;</span> access.log | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -rn</span><br><span class="line"></span><br><span class="line"><span class="comment"># 找错误最多的接口</span></span><br><span class="line">grep <span class="string">&quot;ERROR&quot;</span> app.log | awk <span class="string">&#x27;&#123;print $5&#125;&#x27;</span> | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -rn | <span class="built_in">head</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实时监控错误</span></span><br><span class="line"><span class="built_in">tail</span> -f app.log | grep --line-buffered <span class="string">&quot;ERROR&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>tail -f | grep</code> 要加 <code>--line-buffered</code>，否则 grep 缓冲导致不实时。</p>
+</blockquote>
+<h3 id="进程与系统"><a href="#进程与系统" class="headerlink" title="进程与系统"></a>进程与系统</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep nginx | grep -v grep</span><br><span class="line">ps aux | <span class="built_in">sort</span> -k3 -rn | <span class="built_in">head</span>              <span class="comment"># CPU 前几</span></span><br><span class="line">ps aux | awk <span class="string">&#x27;&#123;sum+=$6&#125; END &#123;print sum/1024&quot; MB&quot;&#125;&#x27;</span>  <span class="comment"># 内存总和</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 谁占用 80 端口</span></span><br><span class="line">ss -tunlp | grep :80</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">&quot;*.log&quot;</span> | xargs grep <span class="string">&quot;error&quot;</span></span><br><span class="line">find . -<span class="built_in">type</span> f -name <span class="string">&quot;*.c&quot;</span> | <span class="built_in">wc</span> -l</span><br><span class="line"><span class="built_in">du</span> -ah /var | <span class="built_in">sort</span> -rh | <span class="built_in">head</span> -10</span><br><span class="line"><span class="built_in">ls</span> | grep <span class="string">&quot;.txt&quot;</span> | xargs -I&#123;&#125; <span class="built_in">mv</span> &#123;&#125; /backup/</span><br></pre></td></tr></table></figure>
+
+<h3 id="文本统计"><a href="#文本统计" class="headerlink" title="文本统计"></a>文本统计</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> file | <span class="built_in">tr</span> <span class="string">&#x27; &#x27;</span> <span class="string">&#x27;\n&#x27;</span> | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -rn | <span class="built_in">head</span></span><br><span class="line">grep -oE <span class="string">&quot;[a-zA-Z]+&quot;</span> file | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -rn</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-管道中的变量作用域（重要坑）"><a href="#8-管道中的变量作用域（重要坑）" class="headerlink" title="8. 管道中的变量作用域（重要坑）"></a>8. 管道中的变量作用域（重要坑）</h2><p>管道里每个命令在<strong>子 shell</strong> 运行，变量修改不影响父 shell：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 1 | <span class="built_in">read</span> x</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$x</span>              <span class="comment"># 空！x 在子 shell 里变了，父 shell 没变</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解决：用进程替换或 here-string</span></span><br><span class="line"><span class="built_in">read</span> x &lt;&lt;&lt; <span class="string">1</span></span><br><span class="line"><span class="string">echo $x              # 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或 bash 的 lastpipe</span></span><br><span class="line"><span class="built_in">shopt</span> -s lastpipe</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-PIPESTATUS：管道退出码"><a href="#9-PIPESTATUS：管道退出码" class="headerlink" title="9. PIPESTATUS：管道退出码"></a>9. PIPESTATUS：管道退出码</h2><p>管道整体退出码是<strong>最后一个命令</strong>的，想看每个：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span> | <span class="literal">true</span></span><br><span class="line"><span class="built_in">echo</span> $?              <span class="comment"># 0（最后一个 true）</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;PIPESTATUS[@]&#125;</span>  <span class="comment"># 1 0（每个命令的退出码）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="10-命名管道（FIFO）"><a href="#10-命名管道（FIFO）" class="headerlink" title="10. 命名管道（FIFO）"></a>10. 命名管道（FIFO）</h2><p>匿名管道只存在于命令间，<code>mkfifo</code> 可创建持久管道：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkfifo</span> mypipe</span><br><span class="line"><span class="comment"># 终端 1</span></span><br><span class="line"><span class="built_in">cat</span> &gt; mypipe</span><br><span class="line"><span class="comment"># 终端 2</span></span><br><span class="line"><span class="built_in">cat</span> mypipe</span><br></pre></td></tr></table></figure>
+
+<p>用于进程间通信，不占磁盘空间。</p>
+<h2 id="11-常见坑"><a href="#11-常见坑" class="headerlink" title="11. 常见坑"></a>11. 常见坑</h2><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stderr 不进管道</td>
+<td>需 <code>2&gt;&amp;1</code></td>
+</tr>
+<tr>
+<td>变量在管道里改不生效</td>
+<td>子 shell 问题，用 <code>&lt;&lt;&lt;</code> 或 <code>lastpipe</code></td>
+</tr>
+<tr>
+<td><code>tail -f | grep</code> 不实时</td>
+<td>加 <code>--line-buffered</code></td>
+</tr>
+<tr>
+<td>文件名含空格</td>
+<td><code>-print0</code> + <code>xargs -0</code></td>
+</tr>
+<tr>
+<td>无用的 cat</td>
+<td><code>cat f | grep x</code> → <code>grep x f</code></td>
+</tr>
+<tr>
+<td>退出码被掩盖</td>
+<td>用 <code>$&#123;PIPESTATUS[@]&#125;</code></td>
+</tr>
+<tr>
+<td>大文件管道爆内存</td>
+<td>优先用 <code>awk</code> 一次处理，少多级</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="专题三：export-详解"><a href="#专题三：export-详解" class="headerlink" title="专题三：export 详解"></a>专题三：export 详解</h1><p><code>export</code> 的作用：把 <strong>shell 变量</strong> 变成 <strong>环境变量</strong>，让子进程能继承。</p>
+<h2 id="1-shell-变量-vs-环境变量"><a href="#1-shell-变量-vs-环境变量" class="headerlink" title="1. shell 变量 vs 环境变量"></a>1. shell 变量 vs 环境变量</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用范围</th>
+<th>创建方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>shell 变量</td>
+<td>仅当前 shell</td>
+<td><code>VAR=value</code></td>
+</tr>
+<tr>
+<td>环境变量</td>
+<td>当前 shell + 所有子进程</td>
+<td><code>export VAR=value</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">VAR=hello</span><br><span class="line">bash -c <span class="string">&#x27;echo $VAR&#x27;</span>      <span class="comment"># 输出空，子进程看不到</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> VAR=hello</span><br><span class="line">bash -c <span class="string">&#x27;echo $VAR&#x27;</span>      <span class="comment"># 输出 hello</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>本质</strong>：环境变量是每个进程都带的一份”键值表”，<code>fork</code> 时复制给子进程；shell 变量只在 shell 内部。</p>
+<h2 id="2-完整语法"><a href="#2-完整语法" class="headerlink" title="2. 完整语法"></a>2. 完整语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> VAR=value         <span class="comment"># 设置并导出</span></span><br><span class="line"><span class="built_in">export</span> VAR               <span class="comment"># 把已有变量导出（值不变）</span></span><br><span class="line"><span class="built_in">export</span> VAR1=1 VAR2=2     <span class="comment"># 一次多个</span></span><br><span class="line"><span class="built_in">export</span> -n VAR            <span class="comment"># 取消导出（变量还在，但不传子进程）</span></span><br><span class="line"><span class="built_in">export</span> -p                <span class="comment"># 列出所有已导出变量</span></span><br><span class="line"><span class="built_in">export</span> -f funcname       <span class="comment"># 导出函数（bash 特有）</span></span><br><span class="line"><span class="built_in">export</span> -fn funcname      <span class="comment"># 取消导出函数</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-导出函数（bash-特有）"><a href="#3-导出函数（bash-特有）" class="headerlink" title="3. 导出函数（bash 特有）"></a>3. 导出函数（bash 特有）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">myfunc</span></span>() &#123; <span class="built_in">echo</span> <span class="string">&quot;hi&quot;</span>; &#125;</span><br><span class="line"><span class="built_in">export</span> -f myfunc</span><br><span class="line">bash -c <span class="string">&#x27;myfunc&#x27;</span>         <span class="comment"># 子 shell 也能用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-查看与验证"><a href="#4-查看与验证" class="headerlink" title="4. 查看与验证"></a>4. 查看与验证</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> -p                <span class="comment"># 当前所有导出变量</span></span><br><span class="line"><span class="built_in">env</span>                      <span class="comment"># 同上（外部命令）</span></span><br><span class="line"><span class="built_in">printenv</span> VAR             <span class="comment"># 单个</span></span><br><span class="line"><span class="built_in">printenv</span> | grep VAR</span><br><span class="line"><span class="built_in">declare</span> -x VAR           <span class="comment"># 显示是否导出（-x 表示已导出）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-常见坑"><a href="#5-常见坑" class="headerlink" title="5. 常见坑"></a>5. 常见坑</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/opt/bin       <span class="comment"># 正确：引用旧值再追加</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/bin             <span class="comment"># 错误：覆盖掉原有 PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> MSG=<span class="string">&quot;hello world&quot;</span>         <span class="comment"># 含空格要引号</span></span><br><span class="line"><span class="built_in">export</span> NUM=10                    <span class="comment"># 值都是字符串，别当数字用</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> VAR=value | grep x        <span class="comment"># 错：export 不产生 stdout，管道没意义</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>export</code> 在<strong>子 shell 或脚本</strong>里执行，退出后失效，不影响父 shell</li>
+<li>配置文件里写 <code>export</code>，<code>source</code> 才生效，直接 <code>./file</code> 只在子 shell 生效</li>
+</ul>
+<hr>
+<h1 id="专题四：环境变量详解"><a href="#专题四：环境变量详解" class="headerlink" title="专题四：环境变量详解"></a>专题四：环境变量详解</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h2><p>环境变量是<strong>操作系统&#x2F;程序运行时的配置</strong>，每个进程都有一份，<code>fork</code> 时继承、<code>exec</code> 时传递。</p>
+<h2 id="2-生命周期与作用域"><a href="#2-生命周期与作用域" class="headerlink" title="2. 生命周期与作用域"></a>2. 生命周期与作用域</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">父 shell  export VAR=1</span><br><span class="line">   │</span><br><span class="line">   ├── 子进程 A（能读到 VAR=1）</span><br><span class="line">   ├── 子进程 B（能读到 VAR=1）</span><br><span class="line">   └── 孙进程（也能读到）</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>只向下传，不向上传</strong>：子进程改环境变量，父进程不知道</li>
+<li><strong>只影响之后启动的进程</strong>：已经在运行的程序不会变</li>
+</ul>
+<h2 id="3-加载顺序（登录时）"><a href="#3-加载顺序（登录时）" class="headerlink" title="3. 加载顺序（登录时）"></a>3. 加载顺序（登录时）</h2><p>以 bash 登录为例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. /etc/profile</span><br><span class="line">2. /etc/profile.d/*.sh</span><br><span class="line">3. ~/.bash_profile</span><br><span class="line">4. ~/.bashrc（通常被 .bash_profile 调用）</span><br><span class="line">5. ~/.bash_logout（退出时）</span><br></pre></td></tr></table></figure>
+
+<p><strong>非交互式</strong>（如脚本）通常只读 <code>$BASH_ENV</code>，不读 <code>.bashrc</code>。</p>
+<h2 id="4-各配置文件对比"><a href="#4-各配置文件对比" class="headerlink" title="4. 各配置文件对比"></a>4. 各配置文件对比</h2><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>生效范围</th>
+<th>生效时机</th>
+<th>适用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/etc/environment</code></td>
+<td>所有用户</td>
+<td>登录</td>
+<td>系统级，<strong>纯 KEY&#x3D;value，不支持 <code>$PATH</code> 展开</strong></td>
+</tr>
+<tr>
+<td><code>/etc/profile</code></td>
+<td>所有用户</td>
+<td>登录</td>
+<td>系统级登录 shell</td>
+</tr>
+<tr>
+<td><code>/etc/profile.d/*.sh</code></td>
+<td>所有用户</td>
+<td>登录</td>
+<td><strong>推荐放系统级变量</strong></td>
+</tr>
+<tr>
+<td><code>/etc/bash.bashrc</code></td>
+<td>所有用户</td>
+<td>交互式 bash</td>
+<td>系统级 bash</td>
+</tr>
+<tr>
+<td><code>~/.bash_profile</code></td>
+<td>当前用户</td>
+<td>登录</td>
+<td>用户级登录 shell</td>
+</tr>
+<tr>
+<td><code>~/.bashrc</code></td>
+<td>当前用户</td>
+<td>交互式 bash</td>
+<td><strong>用户级最常用</strong></td>
+</tr>
+<tr>
+<td><code>~/.profile</code></td>
+<td>当前用户</td>
+<td>登录</td>
+<td>通用（非 bash 也用）</td>
+</tr>
+</tbody></table>
+<p><strong>推荐做法</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用户级</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export MYVAR=value&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统级</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export MYVAR=value&#x27;</span> | <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/profile.d/myvar.sh</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> +x /etc/profile.d/myvar.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-重要环境变量一览"><a href="#5-重要环境变量一览" class="headerlink" title="5. 重要环境变量一览"></a>5. 重要环境变量一览</h2><table>
+<thead>
+<tr>
+<th>变量</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>PATH</code></td>
+<td>命令搜索路径，冒号分隔</td>
+</tr>
+<tr>
+<td><code>HOME</code></td>
+<td>家目录</td>
+</tr>
+<tr>
+<td><code>USER</code> &#x2F; <code>LOGNAME</code></td>
+<td>当前用户</td>
+</tr>
+<tr>
+<td><code>SHELL</code></td>
+<td>默认 shell</td>
+</tr>
+<tr>
+<td><code>PWD</code> &#x2F; <code>OLDPWD</code></td>
+<td>当前&#x2F;上一个目录</td>
+</tr>
+<tr>
+<td><code>LANG</code> &#x2F; <code>LC_ALL</code> &#x2F; <code>LC_*</code></td>
+<td>语言与本地化</td>
+</tr>
+<tr>
+<td><code>TZ</code></td>
+<td>时区</td>
+</tr>
+<tr>
+<td><code>TERM</code></td>
+<td>终端类型</td>
+</tr>
+<tr>
+<td><code>PS1</code> &#x2F; <code>PS2</code></td>
+<td>提示符</td>
+</tr>
+<tr>
+<td><code>EDITOR</code> &#x2F; <code>VISUAL</code></td>
+<td>默认编辑器</td>
+</tr>
+<tr>
+<td><code>LD_LIBRARY_PATH</code></td>
+<td>动态库搜索路径</td>
+</tr>
+<tr>
+<td><code>LD_PRELOAD</code></td>
+<td>预加载库</td>
+</tr>
+<tr>
+<td><code>HISTSIZE</code> &#x2F; <code>HISTFILE</code></td>
+<td>历史配置</td>
+</tr>
+<tr>
+<td><code>JAVA_HOME</code> &#x2F; <code>GOPATH</code></td>
+<td>语言环境</td>
+</tr>
+</tbody></table>
+<h2 id="6-PATH-深入"><a href="#6-PATH-深入" class="headerlink" title="6. PATH 深入"></a>6. PATH 深入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span> | <span class="built_in">tr</span> <span class="string">&#x27;:&#x27;</span> <span class="string">&#x27;\n&#x27;</span>     <span class="comment"># 逐行查看</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/bin:<span class="variable">$PATH</span>   <span class="comment"># 前置，优先找</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/opt/bin   <span class="comment"># 追加，兜底</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">which</span> python                 <span class="comment"># 从 PATH 找第一个</span></span><br><span class="line"><span class="built_in">type</span> -a python               <span class="comment"># 所有匹配</span></span><br><span class="line"><span class="built_in">command</span> -v python            <span class="comment"># 更可移植</span></span><br><span class="line"><span class="built_in">hash</span> -r                      <span class="comment"># 清缓存（改 PATH 后）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>搜索顺序</strong>：从前到后，先找到先用。</p>
+<h2 id="7-临时设置方式对比"><a href="#7-临时设置方式对比" class="headerlink" title="7. 临时设置方式对比"></a>7. 临时设置方式对比</h2><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>生效范围</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>当前会话</td>
+<td>当前 shell</td>
+<td><code>export A=1</code></td>
+</tr>
+<tr>
+<td>单条命令</td>
+<td>仅该进程</td>
+<td><code>A=1 ./prog</code></td>
+</tr>
+<tr>
+<td>子 shell</td>
+<td>括号内</td>
+<td><code>(export A=1; ./prog)</code></td>
+</tr>
+<tr>
+<td>永久</td>
+<td>之后所有</td>
+<td>写配置文件</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A=1 ./prog              <span class="comment"># 只对 prog 有效，不污染当前 shell</span></span><br><span class="line"><span class="built_in">env</span> A=1 ./prog          <span class="comment"># 同上</span></span><br><span class="line">(<span class="built_in">export</span> A=1; ./prog)    <span class="comment"># 子 shell 内有效</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="8-调试"><a href="#8-调试" class="headerlink" title="8. 调试"></a>8. 调试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">env</span> | <span class="built_in">sort</span>                       <span class="comment"># 排序查看</span></span><br><span class="line"><span class="built_in">env</span> | grep -i proxy              <span class="comment"># 查代理</span></span><br><span class="line"><span class="built_in">printenv</span> | <span class="built_in">wc</span> -l                 <span class="comment"># 数量</span></span><br><span class="line">bash -x script.sh                <span class="comment"># 跟踪脚本</span></span><br><span class="line">strace -e trace=execve ./prog    <span class="comment"># 看传给程序的环境</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-常见坑"><a href="#9-常见坑" class="headerlink" title="9. 常见坑"></a>9. 常见坑</h2><ul>
+<li>**<code>/etc/environment</code> 不解析 <code>$PATH</code>**，写 <code>PATH=$PATH:/x</code> 会出错</li>
+<li><strong><code>~/.bashrc</code> 非交互不加载</strong>，脚本&#x2F;服务里可能读不到</li>
+<li><strong>改完要 <code>source</code> 或重新登录</strong></li>
+<li><strong><code>sudo</code> 会重置环境</strong>，需 <code>sudo -E</code> 保留，或 <code>sudo VAR=value cmd</code></li>
+<li><strong><code>su -</code> 会清环境</strong>，<code>su</code> 不带 <code>-</code> 则保留</li>
+<li><strong>值都是字符串</strong>，<code>export N=1; echo $((N+1))</code> 才能算数</li>
+<li><strong>PATH 重复添加会累积</strong>，配置里可判断去重：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&quot;:<span class="variable">$PATH</span>:&quot;</span> <span class="keyword">in</span></span><br><span class="line">  *:/opt/bin:*) ;;</span><br><span class="line">  *) <span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/opt/bin ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="专题五：软链接详解"><a href="#专题五：软链接详解" class="headerlink" title="专题五：软链接详解"></a>专题五：软链接详解</h1><p>软链接是<strong>指向另一个文件的特殊文件</strong>，类似 Windows 快捷方式。</p>
+<h2 id="1-创建"><a href="#1-创建" class="headerlink" title="1. 创建"></a>1. 创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s 目标 链接名</span><br><span class="line"><span class="built_in">ln</span> -s /opt/app/bin/app /usr/local/bin/app   <span class="comment"># 常见：放进 PATH</span></span><br><span class="line"><span class="built_in">ln</span> -s ../real/file <span class="built_in">link</span>                     <span class="comment"># 相对路径</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意参数顺序</strong>：<code>ln -s 目标 链接</code>，目标在前。</p>
+<h2 id="2-硬链接-vs-软链接"><a href="#2-硬链接-vs-软链接" class="headerlink" title="2. 硬链接 vs 软链接"></a>2. 硬链接 vs 软链接</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>硬链接</th>
+<th>软链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令</td>
+<td><code>ln 目标 链接</code></td>
+<td><code>ln -s 目标 链接</code></td>
+</tr>
+<tr>
+<td>inode</td>
+<td>与目标<strong>相同</strong></td>
+<td>独立 inode</td>
+</tr>
+<tr>
+<td>跨文件系统</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>指向目录</td>
+<td>❌（一般）</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>目标删除后</td>
+<td>仍可用（数据还在）</td>
+<td><strong>失效</strong>（悬空链接）</td>
+</tr>
+<tr>
+<td>大小</td>
+<td>同目标</td>
+<td>路径字符串长度</td>
+</tr>
+<tr>
+<td><code>ls -l</code> 显示</td>
+<td>普通文件</td>
+<td><code>l</code> 开头 + <code>-&gt;</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -li file hard soft</span><br><span class="line"><span class="comment"># 硬链接与源 inode 相同，软链接有自己的 inode</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-查看"><a href="#3-查看" class="headerlink" title="3. 查看"></a>3. 查看</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l <span class="built_in">link</span>               <span class="comment"># l 开头，显示 -&gt; 目标</span></span><br><span class="line"><span class="built_in">readlink</span> <span class="built_in">link</span>            <span class="comment"># 显示指向的目标</span></span><br><span class="line"><span class="built_in">readlink</span> -f <span class="built_in">link</span>         <span class="comment"># 解析成绝对路径（跟随）</span></span><br><span class="line"><span class="built_in">realpath</span> <span class="built_in">link</span>            <span class="comment"># 同上</span></span><br><span class="line"><span class="built_in">stat</span> <span class="built_in">link</span>                <span class="comment"># 元数据</span></span><br><span class="line">file <span class="built_in">link</span>                <span class="comment"># 显示 symbolic link</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-修改与删除"><a href="#4-修改与删除" class="headerlink" title="4. 修改与删除"></a>4. 修改与删除</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -sf newtarget <span class="built_in">link</span>    <span class="comment"># -f 强制覆盖已有链接</span></span><br><span class="line"><span class="built_in">rm</span> <span class="built_in">link</span>                  <span class="comment"># 删链接本身，不影响目标</span></span><br><span class="line"><span class="built_in">unlink</span> <span class="built_in">link</span>              <span class="comment"># 同上</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>重要</strong>：<code>rm link</code> 只删链接，<code>rm -r link/</code>（带斜杠）可能删到目标内容，慎用。</p>
+<h2 id="5-悬空链接（broken-link）"><a href="#5-悬空链接（broken-link）" class="headerlink" title="5. 悬空链接（broken link）"></a>5. 悬空链接（broken link）</h2><p>目标被删&#x2F;移动后，软链接失效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l <span class="built_in">link</span>               <span class="comment"># 目标名变红或闪烁</span></span><br><span class="line">find . -xtype l          <span class="comment"># 找出所有悬空软链接</span></span><br><span class="line">find . -xtype l -delete  <span class="comment"># 删除悬空链接</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-相对-vs-绝对路径"><a href="#6-相对-vs-绝对路径" class="headerlink" title="6. 相对 vs 绝对路径"></a>6. 相对 vs 绝对路径</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /opt/app/config /etc/app.conf      <span class="comment"># 绝对，移动链接仍有效</span></span><br><span class="line"><span class="built_in">ln</span> -s ../app/config /etc/app.conf        <span class="comment"># 相对，基于链接所在目录解析</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>相对路径的坑</strong>：相对的是<strong>链接所在目录</strong>，不是当前目录。移动链接后可能失效。</p>
+<h2 id="7-常见用途"><a href="#7-常见用途" class="headerlink" title="7. 常见用途"></a>7. 常见用途</h2><h3 id="放入-PATH"><a href="#放入-PATH" class="headerlink" title="放入 PATH"></a>放入 PATH</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /opt/myapp/bin/myapp /usr/local/bin/myapp</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本切换"><a href="#版本切换" class="headerlink" title="版本切换"></a>版本切换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /opt/jdk-17 /opt/jdk       <span class="comment"># jdk 指向当前版本</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk</span><br><span class="line"><span class="comment"># 换版本只需重指链接</span></span><br><span class="line"><span class="built_in">ln</span> -sfn /opt/jdk-21 /opt/jdk</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置切换"><a href="#配置切换" class="headerlink" title="配置切换"></a>配置切换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/site</span><br></pre></td></tr></table></figure>
+
+<h3 id="库版本"><a href="#库版本" class="headerlink" title="库版本"></a>库版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libfoo.so.1 -&gt; libfoo.so.1.2.3</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-特殊注意"><a href="#8-特殊注意" class="headerlink" title="8. 特殊注意"></a>8. 特殊注意</h2><ul>
+<li><strong><code>ln -s</code> 目标不存在也能创建</strong>（生成悬空链接），不会报错</li>
+<li><strong><code>cp</code> 软链接</strong>：默认复制指向的内容，<code>cp -d</code>&#x2F;<code>-a</code> 保留链接本身</li>
+<li><strong><code>tar</code> 打包</strong>：默认存链接本身，<code>-h</code> 则跟随</li>
+<li><strong><code>rsync -l</code></strong> 保留链接，<code>-L</code> 跟随</li>
+<li><strong>循环链接</strong>：<code>a -&gt; b</code>，<code>b -&gt; a</code>，遍历时会报 <code>too many levels of symbolic links</code></li>
+<li><strong>权限</strong>：软链接权限无意义（多为 777），实际看目标权限</li>
+</ul>
+<h2 id="9-相关命令"><a href="#9-相关命令" class="headerlink" title="9. 相关命令"></a>9. 相关命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ln -s</code></td>
+<td>创建软链接</td>
+</tr>
+<tr>
+<td><code>ln</code></td>
+<td>创建硬链接</td>
+</tr>
+<tr>
+<td><code>readlink</code></td>
+<td>读链接目标</td>
+</tr>
+<tr>
+<td><code>realpath</code></td>
+<td>解析绝对路径</td>
+</tr>
+<tr>
+<td><code>unlink</code></td>
+<td>删除链接</td>
+</tr>
+<tr>
+<td><code>find -xtype l</code></td>
+<td>找悬空链接</td>
+</tr>
+</tbody></table>
+<hr>
+<p>需要我把这份整理导出成 Markdown 文件，或者再补充某个专题（比如 sed、awk、正则）吗？</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240828121952.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240828121952.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">j</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/')">命令</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021305801.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021305801.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021359952.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021359952.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=命令&amp;url=http://example.com/2025/03/26/linux%E5%91%BD%E4%BB%A4/&amp;pic=https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=d94afe8f-3014-3d31-4f04-7fd33dfe778b" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">两情若是久长时，又岂在朝朝暮暮</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/linux/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>linux<span class="tagsPageCount">3</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=5d87f1c6-3755-42cb-afe7-d92b79ca854e" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/08/git-Blog/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/1706896285400.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">git_Blog</div></div></a></div><div class="next-post pull-right"><a href="/2025/04/20/Linux-MQTT-Mysql/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/image-20250420230615400.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux&amp;MQTT&amp;Mysql</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/07/30/linux%E5%AE%89%E8%A3%85typora%E7%A0%B4%E8%A7%A3%E7%89%88/" title="linux安装typora"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/R-C.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-30</div><div class="title">linux安装typora</div></div></a></div><div><a href="/2025/06/29/%E5%85%A8%E5%BF%97V3s%E5%BC%80%E5%8F%91%E6%9D%BF/" title="zero开发板"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=508d48cc-8028-1a54-2666-d9c592c472e2" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-06-29</div><div class="title">zero开发板</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240828121952.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这是我的博客<b style="color:#fff"></b><b style="color:#fff"></b></div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);"><b style="color:#fff"></b><b style="color:#fff"></b></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E7%9B%B8%E5%85%B3"><span class="toc-number">2.</span> <span class="toc-text">内存相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="toc-number">2.1.</span> <span class="toc-text">查看磁盘空间使用情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E5%A4%9A%E5%B0%91%E7%A9%BA%E9%97%B4"><span class="toc-number">2.2.</span> <span class="toc-text">查看当前文件夹占用多少空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E9%99%A4DNS%E7%BC%93%E5%AD%98"><span class="toc-number">4.</span> <span class="toc-text">清除DNS缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">5.</span> <span class="toc-text">打开文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6-find"><span class="toc-number">6.</span> <span class="toc-text">查找文件 find</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6-touch"><span class="toc-number">7.</span> <span class="toc-text">创建文件 touch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%85%83%E6%95%B0%E6%8D%AE-stat"><span class="toc-number">8.</span> <span class="toc-text">文件元数据 stat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B-file"><span class="toc-number">9.</span> <span class="toc-text">文件类型 file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubantu%E5%AE%89%E8%A3%85howdy%EF%BC%88%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%EF%BC%89"><span class="toc-number">10.</span> <span class="toc-text">Ubantu安装howdy（人脸识别）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E9%94%99%E8%AF%AF%E6%8A%A5%E5%91%8A%E5%B7%A5%E5%85%B7"><span class="toc-number">11.</span> <span class="toc-text">关闭错误报告工具</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="toc-number"></span> <span class="toc-text">Linux 常用命令速查表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">一、文件与目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9F%A5%E7%9C%8B%E4%B8%8E%E7%BC%96%E8%BE%91"><span class="toc-number">2.</span> <span class="toc-text">二、查看与编辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">三、文本处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%9F%A5%E6%89%BE"><span class="toc-number">4.</span> <span class="toc-text">四、查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8E%8B%E7%BC%A9%E6%89%93%E5%8C%85"><span class="toc-number">5.</span> <span class="toc-text">五、压缩打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%BD%91%E7%BB%9C"><span class="toc-number">6.</span> <span class="toc-text">六、网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81"><span class="toc-number">7.</span> <span class="toc-text">七、进程与系统状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E7%A3%81%E7%9B%98%E4%B8%8E%E7%A1%AC%E4%BB%B6"><span class="toc-number">8.</span> <span class="toc-text">八、磁盘与硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E7%94%A8%E6%88%B7%E4%B8%8E%E6%9D%83%E9%99%90"><span class="toc-number">9.</span> <span class="toc-text">九、用户与权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%9C%8D%E5%8A%A1%E4%B8%8E%E6%97%A5%E5%BF%97"><span class="toc-number">10.</span> <span class="toc-text">十、服务与日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%8C%85%E7%AE%A1%E7%90%86"><span class="toc-number">11.</span> <span class="toc-text">十一、包管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="toc-number">12.</span> <span class="toc-text">十二、编译工具链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5"><span class="toc-number">13.</span> <span class="toc-text">十三、动态链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E5%B8%AE%E5%8A%A9%E4%B8%8E%E5%8E%86%E5%8F%B2"><span class="toc-number">14.</span> <span class="toc-text">十四、帮助与历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">15.</span> <span class="toc-text">十五、实用小工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E5%8D%B1%E9%99%A9%E5%91%BD%E4%BB%A4%EF%BC%88%E6%85%8E%E7%94%A8%EF%BC%89"><span class="toc-number">16.</span> <span class="toc-text">十六、危险命令（慎用）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E4%B8%93%E9%A2%98"><span class="toc-number"></span> <span class="toc-text">详细专题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%93%E9%A2%98%E4%B8%80%EF%BC%9Agrep-%E8%AF%A6%E8%A7%A3"><span class="toc-number"></span> <span class="toc-text">专题一：grep 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">1. 基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%AD%A3%E5%88%99%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">2. 匹配模式（正则）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%AD%A3%E5%88%99%EF%BC%88BRE%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">基础正则（BRE）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%AD%A3%E5%88%99%EF%BC%88ERE%EF%BC%8C%E7%94%A8-E%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">扩展正则（ERE，用 -E）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%80%89%E9%A1%B9%E5%85%A8%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">3. 选项全表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8E%A7%E5%88%B6"><span class="toc-number">3.1.</span> <span class="toc-text">输出控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%B9%E9%85%8D%E6%8E%A7%E5%88%B6"><span class="toc-number">3.2.</span> <span class="toc-text">匹配控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="toc-number">3.3.</span> <span class="toc-text">上下文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95"><span class="toc-number">3.4.</span> <span class="toc-text">文件与目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%9E%E6%88%98%E7%A4%BA%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">4. 实战示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%80%80%E5%87%BA%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">5. 退出码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B8%B8%E8%A7%81%E5%9D%91"><span class="toc-number">6.</span> <span class="toc-text">6. 常见坑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">7. 相关命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%93%E9%A2%98%E4%BA%8C%EF%BC%9A%E7%AE%A1%E9%81%93%E8%AF%A6%E8%A7%A3"><span class="toc-number"></span> <span class="toc-text">专题二：管道详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-1"><span class="toc-number">1.</span> <span class="toc-text">1. 基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%89%E4%B8%AA%E6%A0%87%E5%87%86%E6%B5%81"><span class="toc-number">2.</span> <span class="toc-text">2. 三个标准流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%AE%A1%E9%81%93%E7%9A%84%E9%98%BB%E5%A1%9E%E4%B8%8E-SIGPIPE"><span class="toc-number">3.</span> <span class="toc-text">3. 管道的阻塞与 SIGPIPE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%B8%8E%E5%85%B6%E4%BB%96%E9%87%8D%E5%AE%9A%E5%90%91%E9%85%8D%E5%90%88"><span class="toc-number">4.</span> <span class="toc-text">4. 与其他重定向配合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-tee%EF%BC%9A%E7%AE%A1%E9%81%93%E9%87%8C%E7%9A%84%E4%B8%89%E9%80%9A"><span class="toc-number">5.</span> <span class="toc-text">5. tee：管道里的三通</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-xargs%EF%BC%9A%E6%8A%8A%E7%AE%A1%E9%81%93%E8%BE%93%E5%85%A5%E8%BD%AC%E6%88%90%E5%8F%82%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">6. xargs：把管道输入转成参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E7%BB%8F%E5%85%B8%E7%AE%A1%E9%81%93%E9%93%BE"><span class="toc-number">7.</span> <span class="toc-text">7. 经典管道链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90"><span class="toc-number">7.1.</span> <span class="toc-text">日志分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%B3%BB%E7%BB%9F"><span class="toc-number">7.2.</span> <span class="toc-text">进程与系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-number">7.3.</span> <span class="toc-text">文件处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%BB%9F%E8%AE%A1"><span class="toc-number">7.4.</span> <span class="toc-text">文本统计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%AE%A1%E9%81%93%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%88%E9%87%8D%E8%A6%81%E5%9D%91%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">8. 管道中的变量作用域（重要坑）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-PIPESTATUS%EF%BC%9A%E7%AE%A1%E9%81%93%E9%80%80%E5%87%BA%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text">9. PIPESTATUS：管道退出码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%91%BD%E5%90%8D%E7%AE%A1%E9%81%93%EF%BC%88FIFO%EF%BC%89"><span class="toc-number">10.</span> <span class="toc-text">10. 命名管道（FIFO）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%B8%B8%E8%A7%81%E5%9D%91"><span class="toc-number">11.</span> <span class="toc-text">11. 常见坑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%93%E9%A2%98%E4%B8%89%EF%BC%9Aexport-%E8%AF%A6%E8%A7%A3"><span class="toc-number"></span> <span class="toc-text">专题三：export 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-shell-%E5%8F%98%E9%87%8F-vs-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">1. shell 变量 vs 环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">2. 完整语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AF%BC%E5%87%BA%E5%87%BD%E6%95%B0%EF%BC%88bash-%E7%89%B9%E6%9C%89%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">3. 导出函数（bash 特有）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9F%A5%E7%9C%8B%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">4. 查看与验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B8%B8%E8%A7%81%E5%9D%91"><span class="toc-number">5.</span> <span class="toc-text">5. 常见坑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%93%E9%A2%98%E5%9B%9B%EF%BC%9A%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AF%A6%E8%A7%A3"><span class="toc-number"></span> <span class="toc-text">专题四：环境变量详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">1. 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">2.</span> <span class="toc-text">2. 生命周期与作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F%EF%BC%88%E7%99%BB%E5%BD%95%E6%97%B6%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">3. 加载顺序（登录时）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%90%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%AF%B9%E6%AF%94"><span class="toc-number">4.</span> <span class="toc-text">4. 各配置文件对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%87%8D%E8%A6%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B8%80%E8%A7%88"><span class="toc-number">5.</span> <span class="toc-text">5. 重要环境变量一览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-PATH-%E6%B7%B1%E5%85%A5"><span class="toc-number">6.</span> <span class="toc-text">6. PATH 深入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%B8%B4%E6%97%B6%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="toc-number">7.</span> <span class="toc-text">7. 临时设置方式对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%B0%83%E8%AF%95"><span class="toc-number">8.</span> <span class="toc-text">8. 调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%B8%B8%E8%A7%81%E5%9D%91"><span class="toc-number">9.</span> <span class="toc-text">9. 常见坑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%93%E9%A2%98%E4%BA%94%EF%BC%9A%E8%BD%AF%E9%93%BE%E6%8E%A5%E8%AF%A6%E8%A7%A3"><span class="toc-number"></span> <span class="toc-text">专题五：软链接详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">1. 创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%A1%AC%E9%93%BE%E6%8E%A5-vs-%E8%BD%AF%E9%93%BE%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">2. 硬链接 vs 软链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9F%A5%E7%9C%8B"><span class="toc-number">3.</span> <span class="toc-text">3. 查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%88%A0%E9%99%A4"><span class="toc-number">4.</span> <span class="toc-text">4. 修改与删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%82%AC%E7%A9%BA%E9%93%BE%E6%8E%A5%EF%BC%88broken-link%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">5. 悬空链接（broken link）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%9B%B8%E5%AF%B9-vs-%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">6.</span> <span class="toc-text">6. 相对 vs 绝对路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%B8%B8%E8%A7%81%E7%94%A8%E9%80%94"><span class="toc-number">7.</span> <span class="toc-text">7. 常见用途</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BE%E5%85%A5-PATH"><span class="toc-number">7.1.</span> <span class="toc-text">放入 PATH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2"><span class="toc-number">7.2.</span> <span class="toc-text">版本切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%88%87%E6%8D%A2"><span class="toc-number">7.3.</span> <span class="toc-text">配置切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E7%89%88%E6%9C%AC"><span class="toc-number">7.4.</span> <span class="toc-text">库版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%89%B9%E6%AE%8A%E6%B3%A8%E6%84%8F"><span class="toc-number">8.</span> <span class="toc-text">8. 特殊注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">9.</span> <span class="toc-text">9. 相关命令</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/08/15/linux%E8%BD%AF%E4%BB%B6/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=5d87f1c6-3755-42cb-afe7-d92b79ca854e" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2026/08/15/linux%E8%BD%AF%E4%BB%B6/" title="无题">无题</a><time datetime="2026-08-14T17:24:20.740Z" title="发表于 2026-08-15 01:24:20">2026-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%A9python%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E5%90%8E%E5%8F%B0/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=120e3f31-a363-b737-a618-100c99b8ba5d" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/08/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%A9python%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E5%90%8E%E5%8F%B0/" title="无题">无题</a><time datetime="2025-08-06T06:33:52.678Z" title="发表于 2025-08-06 14:33:52">2025-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/30/%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E5%9B%BE%E6%A1%88/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=a3c20975-ed71-700b-768a-8a877b71546a" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/06/30/%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E5%9B%BE%E6%A1%88/" title="无题">无题</a><time datetime="2025-06-30T01:16:09.815Z" title="发表于 2025-06-30 09:16:09">2025-06-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/29/%E5%85%A8%E5%BF%97V3s%E5%BC%80%E5%8F%91%E6%9D%BF/" title="zero开发板"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/picgo202403021340791.jpg?_r_=508d48cc-8028-1a54-2666-d9c592c472e2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="zero开发板"/></a><div class="content"><a class="title" href="/2025/06/29/%E5%85%A8%E5%BF%97V3s%E5%BC%80%E5%8F%91%E6%9D%BF/" title="zero开发板">zero开发板</a><time datetime="2025-06-29T14:39:02.000Z" title="发表于 2025-06-29 22:39:02">2025-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/20/Linux-MQTT-Mysql/" title="Linux&amp;MQTT&amp;Mysql"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://wj-yqt.oss-cn-chengdu.aliyuncs.com/image-20250420230615400.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux&amp;MQTT&amp;Mysql"/></a><div class="content"><a class="title" href="/2025/04/20/Linux-MQTT-Mysql/" title="Linux&amp;MQTT&amp;Mysql">Linux&amp;MQTT&amp;Mysql</a><time datetime="2025-04-20T15:00:46.000Z" title="发表于 2025-04-20 23:00:46">2025-04-20</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2026 By <a class="footer-bar-link" href="/" title="j" target="_blank">j</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/music/"><span> 音乐馆</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/album/"><span> 相册集</span></a></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>3</sup></a><a href="/tags/%E7%82%B9%E7%81%AF/" style="font-size: 0.88rem;">点灯<sup>1</sup></a><a href="/tags/%E7%85%A7%E7%89%87/" style="font-size: 0.88rem;">照片<sup>1</sup></a><a href="/tags/%E7%8E%A9%E5%84%BF/" style="font-size: 0.88rem;">玩儿<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem;">笔记<sup>10</sup></a><a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 0.88rem;">踩坑<sup>1</sup></a><a href="/tags/%E9%92%A6%E5%A9%B7/" style="font-size: 0.88rem;">钦婷<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("02/17/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 j 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
